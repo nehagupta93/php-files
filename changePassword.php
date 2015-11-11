@@ -1,11 +1,10 @@
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST'){
 	$userId = $_POST['userId'];
-	$oldPassword = $_POST['oldPassword'];
 	$newPassword = $_POST['newPassword'];
 
 	require_once('dbConnect.php');
-	$sql = "SELECT * FROM user WHERE userId='$userId' AND password = '$oldPassword'";
+	$sql = "SELECT * FROM user WHERE userId='$userId'";
 	
 	$check = mysqli_fetch_array(mysqli_query($con,$sql));
 	
@@ -17,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		echo 'Oops! Please try again';
 		}
 	}else{
-		echo 'old password incorrect';
+		echo 'error';
 	}
 	mysqli_close($con);
 }else{
