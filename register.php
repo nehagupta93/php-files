@@ -13,8 +13,8 @@ $check = mysqli_fetch_array(mysqli_query($con,$sql));
 if(isset($check)){
 	echo 'userID or emailID already exists';
 }else{
-	$sql = "INSERT INTO user (userID,emailID,password,balance) VALUES ('$userID','$emailID','$password','$balance')";
-	if(mysqli_query($con,$sql)){
+	$sql = "INSERT INTO user (userId,emailId,password,balance) VALUES('$userId','$emailId','$password','$balance')";
+	if(mysqli_query($con,$sql)!=null){
 		echo 'Successfully registered';
 	}else{
 		echo 'Oops! Please try again';
