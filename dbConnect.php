@@ -1,5 +1,5 @@
 <?php
-define('HOST','sql11.hostinger.in');
+define('HOST','mysql.hostinger.in');
 define('USER','u350201952_apper');
 define('PASS','laendaenapp1');
 define('DB','u350201952_appdb');
